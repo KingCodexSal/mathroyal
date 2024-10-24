@@ -1,0 +1,283 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar styles */
+
+.navbar {
+  padding: 1rem; /* Padding for navbar */
+}
+/* Hero section styles */
+#home {
+  position: relative; /* To position overlay correctly */
+  height: 100vh; /* Full-screen height */
+  background: url("your-background-image.jpg") no-repeat center center; /* Add a background image */
+  background-size: cover; /* Cover the entire section */
+  color: white; /* Text color for visibility */
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  flex-direction: column; /* Stack elements vertically */
+  background: url(pexels-a-darmel-8134100.jpg) no-repeat center;
+  background-size: cover;
+}
+
+#home .overlay {
+  position: absolute; /* Positioning the overlay */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1; /* Ensure overlay is above background but below text */
+}
+
+.hero-text {
+  text-align: center; /* Center text */
+  z-index: 2; /* Ensure text is above overlay */
+}
+
+.hero-title {
+  font-size: 2.5rem; /* Responsive font size */
+  font-weight: bold;
+}
+
+.hero-caption {
+  font-size: 1.2rem; /* Responsive font size */
+  margin-bottom: 20px; /* Space below caption */
+}
+
+.buttons {
+  z-index: 2; /* Ensure buttons are above overlay */
+  display: flex; /* Flexbox for button alignment */
+  gap: 20px; /* Space between buttons */
+}
+
+.btn {
+  padding: 10px 20px; /* Button padding */
+  font-size: 1rem; /* Font size */
+  border: none; /* Remove default border */
+  border-radius: 50px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.btn a {
+  color: white; /* Button text color */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Bootstrap primary color */
+}
+
+.btn-secondary {
+  background-color: #28a745; /* Bootstrap secondary color */
+}
+
+/* Hover effects for buttons */
+.btn-primary:hover,
+.btn-secondary:hover {
+  opacity: 0.8; /* Slightly transparent on hover */
+}
+
+/* Loan Procedure Section Styles */
+#loan-procedure {
+  background-color: #f0f4f8; /* Light background for the section */
+  padding: 50px 0; /* Spacing around the section */
+}
+
+.procedure-container {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items */
+  justify-content: center; /* Center vertically */
+  max-width: 1200px; /* Max width of the section */
+  margin: 0 auto; /* Center section */
+  padding: 20px; /* Padding around section */
+}
+
+.procedure-title {
+  text-align: center; /* Center title */
+  margin-bottom: 20px; /* Space below the title */
+}
+
+.procedure-box {
+  background: #ffffff; /* White background for the card */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow for more depth */
+  overflow: hidden; /* Prevent overflow */
+  display: flex; /* Flexbox layout */
+  flex-direction: row; /* Horizontal layout by default */
+  max-width: 800px; /* Limit width on larger screens */
+  width: 90%; /* Full width on mobile */
+  margin: 20px; /* Margin around the box */
+}
+
+.procedure-content {
+  display: flex; /* Flexbox for layout */
+  flex-direction: row; /* Arrange items in a row */
+  width: 100%; /* Full width */
+}
+
+.procedure-img {
+  flex: 1; /* Flex item for image */
+  display: flex; /* Flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  padding: 20px; /* Padding inside the image container */
+}
+
+.procedure-img img {
+  max-width: 80%; /* Ensure image doesn't take full width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners for image */
+}
+
+.procedure-text {
+  flex: 1; /* Flex item for text */
+  padding: 20px; /* Padding around text */
+  display: flex; /* Flexbox for content */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center vertically */
+}
+
+.procedure-item {
+  display: flex; /* Use flexbox for items */
+  align-items: center; /* Center items vertically */
+  margin: 15px 0; /* Margin between items */
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+}
+
+.procedure-item i {
+  margin-right: 10px; /* Space between icon and text */
+  color: #007bff; /* Icon color */
+}
+
+.cta {
+  text-align: center; /* Center call-to-action button */
+  margin-top: 20px; /* Margin above button */
+}
+
+.cta button {
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  padding: 12px 24px; /* Button padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Transition effect */
+}
+
+.cta button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.cta button a {
+  color: #fff; /* Ensure link text color is white */
+  text-decoration: none; /* Remove underline from link */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .procedure-box {
+    flex-direction: column; /* Stack image and text vertically on smaller screens */
+  }
+
+  .procedure-content {
+    flex-direction: column; /* Stack items vertically on mobile */
+  }
+
+  .procedure-img,
+  .procedure-text {
+    width: 100%; /* Full width for both on smaller screens */
+  }
+}
+
+/* Contact Section Styles */
+#contact {
+  background-color: #f8f9fa; /* Light background */
+  padding: 40px 15px; /* Vertical padding and side padding */
+}
+
+.contact-form {
+  background-color: white; /* White background for the form */
+  border-radius: 0.5rem; /* Rounded corners */
+  padding: 20px; /* Padding around form */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.contact-inputs {
+  padding: 15px; /* Padding for inputs */
+  border: 1px solid #ced4da; /* Border style */
+  border-radius: 0.25rem; /* Rounded corners */
+}
+
+.contact-inputs:focus {
+  border-color: #80bdff; /* Focus border color */
+  box-shadow: 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Focus shadow */
+}
+
+.contact-image {
+  display: flex; /* Center the image vertically */
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Align image vertically */
+  height: 100%; /* Full height for consistency */
+  border-radius: 0.5rem; /* Match the border-radius of the form */
+}
+
+.row {
+  display: flex; /* Use flexbox for equal height */
+}
+
+.row > div {
+  display: flex; /* Make the inner divs flexible */
+  flex-direction: column; /* Align items in a column */
+  justify-content: center; /* Center content vertically */
+}
+
+.contact-image img {
+  width: auto; /* Maintain image aspect ratio */
+  height: 90%; /* Make image take full height of the column */
+  object-fit: cover; /* Cover to maintain aspect ratio without distortion */
+  border-radius: 0.5rem; /* Ensure image has rounded corners */
+}
+
+/* Footer styles */
+footer {
+  background-color: #343a40; /* Dark background */
+  color: white; /* Text color */
+  padding: 20px 0;
+  position: relative;
+}
+
+.social-icons i {
+  font-size: 24px;
+  margin: 0 10px; /* Space between icons */
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #28a745; /* Change color on hover */
+}
+
+.footerNav ul {
+  padding: 0;
+  list-style: none; /* Remove bullet points */
+}
+
+.footerNav li {
+  display: inline;
+  margin: 0 15px; /* Space between items */
+}
+
+.footerBottom p {
+  margin: 0;
+}
